@@ -46,9 +46,8 @@ export default async function categoriezdProjects({
 		)
 	);
 
-	console.log(category.toString());
-	function getCategory(category: Promise<string>) {
-		switch (category[Symbol.toStringTag]) {
+	async function getCategory(category: Promise<string>) {
+		switch (await category) {
 			case "kitchen":
 				return "Кухни";
 			case "bathroom":
