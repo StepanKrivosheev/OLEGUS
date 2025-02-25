@@ -2,6 +2,7 @@ import { client } from "@/src/sanity/lib/client";
 import Project from "@/src/components/Project";
 import { defineQuery } from "next-sanity";
 import Categorys from "@/src/components/Categorys";
+import React from "react";
 
 interface Image {
 	_id: string;
@@ -28,14 +29,16 @@ interface Project {
 	_updateAt: Date;
 }
 
+interface params {
+	category: Promise<string>;
+}
+
 export default async function categoriezdProjects({
 	params,
 }: {
-	params: { category: string };
+	params: Promise<params>;
 }) {
-	params = await params;
-
-	const { category } = params;
+	const { category } = await params;
 
 	const project = await client.fetch(
 		defineQuery(
@@ -43,8 +46,8 @@ export default async function categoriezdProjects({
 		)
 	);
 
-	function getCategory(category: string) {
-		switch (category) {
+	function getCategory(category: Promise<string>) {
+		switch (category[Symbol.toStringTag]) {
 			case "kitchen":
 				return "Кухни";
 			case "bathroom":
