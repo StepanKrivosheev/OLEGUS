@@ -1,0 +1,73 @@
+@import 'tailwindcss';
+@import 'easymde/dist/easymde.min.css';
+
+@font-face {
+    font-family: Geologica;
+    src: url("../fonts/Geologica-VariableFont_CRSV,SHRP,slnt,wght.ttf") ;
+  }
+
+@theme {
+  --font-rus: "Geologica", "serif";
+  --font-display: "Roboto", "sans-serif";
+  --breakpoint-3xl: 1920px;
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+  --color-primary: var(--color-primary);
+  --color-bg: #929292;
+  --text-md: 1.1rem;
+  --breakpoint-md: 811px;
+  --shadow-all: 0px 0px 10px ;
+  --shadow-all-lg: 0px 0px 15px ;
+  --shadow-all-xl: 0px 0px 20px ;
+  --color-text: #ededed;
+  --color-background: #0b0d0e;
+  --color-primary: #06496a;
+  --color-secondary: #385f75;
+  --color-accent: #4995bc;
+  --color-bg: #263a45;
+
+}
+
+
+html{
+	@apply bg-background font-rus text-text min-w-[320px]
+}
+
+::-webkit-scrollbar{
+	width: .8rem;
+ }
+
+ .no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: scroll;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+ 
+ ::-webkit-scrollbar-thumb{
+
+   background-color: var(--color-secondary);
+   width: .78rem;
+   border-radius: 1em;
+   border-color: black;
+   border: .08rem solid black;
+ }
+ 
+ ::-webkit-scrollbar-thumb:hover{
+   @apply bg-accent;
+ }
+ 
+ ::-webkit-scrollbar-track{
+  @apply bg-background;
+ }
+
+ .button{
+  @apply  hover:transition hover:scale-[1.2] ease-in-out duration-700 hover:bg-accent justify-end mr-6 bg-secondary rounded-2xl px-4 py-3.5 
+ }
+
+ :focus-visible{
+  outline: none;
+ }
