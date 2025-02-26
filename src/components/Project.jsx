@@ -17,6 +17,8 @@ export default async function card(props) {
 					key={post?._id}>
 					<button className="md:w-2/5 float-left mt-4 md:flex h-100 focus-within:*:!flex relative">
 						<Image
+							width={1000}
+							height={1000}
 							className="object-cover size-full  rounded-2xl"
 							src={urlFor(post.Images[0]).url()}
 							alt="image of my projects"
@@ -39,6 +41,8 @@ export default async function card(props) {
 					{post.Images != undefined ?
 						post.Images.map((x, i) => (
 							<Image
+								width={1000}
+								height={1000}
 								className={
 									i > 0 ?
 										"object-cover my-4 rounded-lg"

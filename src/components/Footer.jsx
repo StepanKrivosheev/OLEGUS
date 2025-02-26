@@ -2,7 +2,6 @@ import Logo from "./Logo";
 import facbook from "@/public/facebook.png";
 import Image from "next/image";
 
-
 const Footer = async () => {
 	return (
 		<div className="flex gap-6 ml-8  fixed bottom-4 items-center w-full">
@@ -24,6 +23,9 @@ const Footer = async () => {
 					href="https://www.facebook.com/oleg3009"
 					className="transition hover:bg-primary rounded-full ">
 					<Image
+						width={1000}
+				
+						height={1000}
 						src={facbook.src}
 						alt="facebook logo"
 						className="max-w-10"

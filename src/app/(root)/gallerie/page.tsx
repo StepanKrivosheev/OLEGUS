@@ -20,20 +20,22 @@ export default async function Gallerie() {
 	const allImages: AllImages[] = await client.fetch(IMAGES_QUERY);
 	const images: Image[] = allImages.map((x) => x.images).flat();
 
-return (
-        <div className="grid md:py-16 md:pt-44 pt-22 md:px-18 md:max-w-[1900px] justify-center md:m-auto">
-            <div className="bg-primary/15 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 rounded-2xl">
-                {images.map((i, x) =>
-                    i != undefined ? (
-                        <Image
-                            alt="Images of my work at various projects and stages of completion"
-                            key={x}
-                            className={`rounded-2xl object-cover w-full h-full ${x % 5 === 0 ? 'col-span-2' : ''}`}
-                            src={urlFor(i).url()}
-                        />
-                    ) : null
-                )}
-            </div>
-        </div>
-    );
+	return (
+		<div className="grid md:py-16 md:pt-44 pt-22 md:px-18 md:max-w-[1900px] justify-center md:m-auto">
+			<div className="bg-primary/15 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 rounded-2xl">
+				{images.map((i, x) =>
+					i != undefined ?
+						<Image
+							width={1000}
+							height={1000}
+							alt="Images of my work at various projects and stages of completion"
+							key={x}
+							className={`rounded-2xl object-cover w-full h-full ${x % 5 === 0 ? "col-span-2" : ""}`}
+							src={urlFor(i).url()}
+						/>
+					:	null
+				)}
+			</div>
+		</div>
+	);
 }

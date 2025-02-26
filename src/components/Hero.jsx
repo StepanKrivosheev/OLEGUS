@@ -1,12 +1,13 @@
 import me from "../../public/me.avif";
 import Image from "next/image";
 
-
 const Hero = () => {
 	return (
 		<div className="mx-auto justify-center flex ">
 			<div className="md:flex items-center mt-74  max-w-[1500px] mx-10  rounded-4xl  p-4 shadow-lg bg-primary/15  hover:bg-primary/25 ease-in-out duration-300">
 				<Image
+					width={1000}
+					height={1000}
 					src={me.src}
 					alt="My picture, Oleg Krivosheev, Male"
 					className=" h-64 m-4   rounded-full border-accent justify-self-center shadow-accent  shadow-all-lg object-cover"

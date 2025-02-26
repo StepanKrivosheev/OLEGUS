@@ -17,6 +17,8 @@ export default function Card(props) {
 						<Slides autoSlide={true}>
 							{Images.map((x, i) => (
 								<Image
+									width={1000}
+						height={1000}
 									alt="image of my projects"
 									key={i}
 									className="object-cover  "
