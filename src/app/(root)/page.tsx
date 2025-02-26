@@ -1,6 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
-import Card from "../../components/Card";
 import CardList from "../../components/CardList";
 import Hero from "../../components/Hero";
 

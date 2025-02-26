@@ -2,7 +2,6 @@ import React from "react";
 import Card from "./Card";
 import { client } from "../sanity/lib/client";
 import { PROJECT_QUERY } from "../sanity/lib/queryies";
-import { project } from "../sanity/schemaTypes/project";
 
 export default async function cardList() {
 	const project = await client.fetch(PROJECT_QUERY);
@@ -18,6 +17,7 @@ export default async function cardList() {
 								post={post}
 							/>
 						:	<a
+								key={post?._id}
 								href={"/myprojects"}
 								className="button col-span-2 justify-self-center !bg-primary/15 hover:!bg-secondary">
 								Show more

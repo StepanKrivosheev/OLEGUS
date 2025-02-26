@@ -1,11 +1,12 @@
 import React from "react";
 import { urlFor } from "../sanity/lib/image";
 import Slides from "./Slides";
+import Image from "next/image";
 
 export default function Card(props) {
 	const post = props.post;
 
-	const { _id, Images, Category } = post;
+	const { Images, Category } = post;
 
 	console.log(Category);
 	return (
@@ -15,7 +16,8 @@ export default function Card(props) {
 					<div className="flex w-1/2 object-cover rounded-2xl">
 						<Slides autoSlide={true}>
 							{Images.map((x, i) => (
-								<img
+								<Image
+									alt="image of my projects"
 									key={i}
 									className="object-cover  "
 									src={urlFor(x).url()}

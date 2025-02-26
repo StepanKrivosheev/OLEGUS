@@ -9,7 +9,6 @@
 
 import { NextStudio } from "next-sanity/studio";
 import config from "../../../../../sanity.config";
-import Layout from "@/src/app/(root)/layout";
 
 export const dynamic = "force-static";
 

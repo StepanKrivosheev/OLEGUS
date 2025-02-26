@@ -16,7 +16,7 @@ export default async function cardList() {
 			</h2>
 			<div className="grid grid-cols-1 gap-8 mx-10 mt-8 mb-20  max-w-[1200px]">
 				{project?.length > 0 ?
-					project.map((post, i) => (
+					project.map((post) => (
 						<Project
 							key={post?._id}
 							post={post}

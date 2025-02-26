@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "@/src/app/(root)/globals.css";
+import React from "react";
 
 export const metadata: Metadata = {
 	title: "Oleg und Söhne",

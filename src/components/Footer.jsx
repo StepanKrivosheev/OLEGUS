@@ -1,5 +1,7 @@
 import Logo from "./Logo";
 import facbook from "@/public/facebook.png";
+import Image from "next/image";
+
 
 const Footer = async () => {
 	return (
@@ -21,7 +23,7 @@ const Footer = async () => {
 					target="_blank"
 					href="https://www.facebook.com/oleg3009"
 					className="transition hover:bg-primary rounded-full ">
-					<img
+					<Image
 						src={facbook.src}
 						alt="facebook logo"
 						className="max-w-10"

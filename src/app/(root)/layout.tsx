@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import grain from "../../../public/grain.jpg";
+import React from "react";
 
 export const metadata: Metadata = {
 	title: "Oleg und Söhne",
