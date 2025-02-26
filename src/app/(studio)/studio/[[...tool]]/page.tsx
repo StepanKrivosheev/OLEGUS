@@ -5,7 +5,7 @@ import { StudioProvider, StudioLayout } from "sanity";
 
 import config from "@/sanity.config";
 
-function StudioPage() {
+export default function StudioPage() {
 	return (
 		<NextStudio config={config}>
 			<StudioProvider config={config}>
