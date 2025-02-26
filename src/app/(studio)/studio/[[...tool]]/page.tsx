@@ -19,10 +19,5 @@ export { metadata, viewport } from "next-sanity/studio";
 // }
 
 export default function StudioPage() {
-	return (
-		<NextStudio
-			history="hash"
-			config={config}
-		/>
-	);
+	return <NextStudio config={config} />;
 }
