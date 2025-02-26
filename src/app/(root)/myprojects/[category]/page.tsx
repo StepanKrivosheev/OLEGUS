@@ -33,6 +33,18 @@ interface params {
 	category: Promise<string>;
 }
 
+export async function generateStaticParams() {
+    const categories = await client.fetch(
+        defineQuery(`*[_type == "project"].Category`)
+    );
+
+    const uniqueCategories = Array.from(new Set(categories));
+
+    return uniqueCategories.map((category) => ({
+        params: { category },
+    }));
+}
+
 export default async function categoriezdProjects({
 	params,
 }: {
@@ -86,3 +98,5 @@ export default async function categoriezdProjects({
 		</div>
 	);
 }
+
+
