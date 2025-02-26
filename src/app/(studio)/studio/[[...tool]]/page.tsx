@@ -14,10 +14,11 @@ export const dynamic = "force-static";
 
 export { metadata, viewport } from "next-sanity/studio";
 
-export async function generateStaticParams() {
-	return { null: null };
-}
-
 export default function StudioPage() {
-	return <NextStudio config={config} />;
+	return (
+		<NextStudio
+			history="hash"
+			config={config}
+		/>
+	);
 }
