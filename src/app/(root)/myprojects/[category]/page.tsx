@@ -33,15 +33,7 @@ interface params {
 	category: Promise<string>;
 }
 
-export async function generateStaticParams(): Promise<params[]> {
-	const categories = await client.fetch(
-		defineQuery(`*[_type == "project"].Category`)
-	);
-
-	return categories.map((category: string) => ({
-		params: { category },
-	}));
-}
+export const dynamic = "force-dynamic";
 
 export default async function categoriezdProjects({
 	params,
