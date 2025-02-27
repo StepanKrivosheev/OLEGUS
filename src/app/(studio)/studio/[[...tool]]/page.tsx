@@ -35,6 +35,6 @@ export async function generateStaticParams() {
 	return {};
 }
 
-export function StudioPage() {
+export default function StudioPage() {
 	return <NextStudio config={config} />;
 }
