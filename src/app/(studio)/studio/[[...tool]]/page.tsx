@@ -27,14 +27,10 @@
 import { NextStudio } from "next-sanity/studio";
 import config from "../../../../../sanity.config";
 
-export const dynamic = "force-static";
+export const dynamic = false;
 
 export { metadata, viewport } from "next-sanity/studio";
 
-export async function generateStaticParams(): Promise<any[]> {
-	return [];
-  }
-  
 export default function StudioPage() {
 	return <NextStudio config={config} />;
 }
