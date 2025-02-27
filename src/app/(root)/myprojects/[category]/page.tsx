@@ -42,10 +42,10 @@ export async function generateStaticParams(): Promise<
 		defineQuery(`*[_type == "project"].Category`)
 	);
 
-	const uniqueCategories = Array.from(new Set(categories));
+	const uniqueCategories: string[] = Array.from(new Set(categories));
 
 	return uniqueCategories.map((category) => ({
-		params: { category: category as string },
+		params: { category },
 	}));
 }
 
