@@ -27,7 +27,7 @@
 import { NextStudio } from "next-sanity/studio";
 import config from "../../../../../sanity.config";
 
-export const dynamic = false;
+export const dynamic = "fotce-dynamic";
 
 export { metadata, viewport } from "next-sanity/studio";
 
