@@ -36,7 +36,7 @@ interface PageProps {
 }
 
 export async function generateStaticParams(): Promise<
-	{ params: { category: string } }[]
+	Array<{ params: { category: string } }>
 > {
 	const categories = await client.fetch(
 		defineQuery(`*[_type == "project"].Category`)
@@ -44,12 +44,12 @@ export async function generateStaticParams(): Promise<
 
 	const uniqueCategories: string[] = Array.from(new Set(categories));
 
-	return uniqueCategories.map((category) => ({
+	return uniqueCategories.map((category: string) => ({
 		params: { category },
 	}));
 }
 
-export default async function CategorizedProjects({ params }: PageProps) {
+export default async function CategorizedProjects({ params }: { params: { category: string } }) {
 	const { category } = params;
 
 	const project = await client.fetch(
