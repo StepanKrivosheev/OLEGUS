@@ -1,3 +1,4 @@
+"use client";
 import { client } from "@/src/sanity/lib/client";
 import Project from "@/src/components/Project";
 import { defineQuery } from "next-sanity";
