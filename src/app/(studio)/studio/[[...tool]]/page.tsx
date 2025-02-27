@@ -31,18 +31,9 @@ export const dynamic = "force-static";
 
 export { metadata, viewport } from "next-sanity/studio";
 
-export async function generateStaticParams(): Promise<
-	{ params: { tool: string[] } }[]
-> {
-	return [
-		{
-			params: {
-				tool: [],
-			},
-		},
-	];
+export async function generateStaticParams() {
+	[];
 }
-
 export default function StudioPage() {
 	return <NextStudio config={config} />;
 }
