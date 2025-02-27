@@ -1,4 +1,3 @@
-"use client";
 import { client } from "@/src/sanity/lib/client";
 import Project from "@/src/components/Project";
 import { defineQuery } from "next-sanity";
@@ -34,19 +33,15 @@ interface params {
 	category: Promise<string>;
 }
 
-export const dynamic = "force-dynamic";
+export async function generateStaticParams(): Promise<params[]> {
+	const categories = await client.fetch(
+		defineQuery(`*[_type == "project"].Category`)
+	);
 
-// export async function generateStaticParams(): Promise<
-// 	{ params: { category: string } }[]
-// > {
-// 	const categories = await client.fetch(
-// 		defineQuery(`*[_type == "project"].Category`)
-// 	);
-
-// 	return categories.map((category: string) => ({
-// 		params: { category },
-// 	}));
-// }
+	return categories.map((category: string) => ({
+		params: { category },
+	}));
+}
 
 export default async function categoriezdProjects({
 	params,
