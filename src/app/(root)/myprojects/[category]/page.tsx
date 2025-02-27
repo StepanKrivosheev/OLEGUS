@@ -33,10 +33,8 @@ interface params {
 	category: Promise<string>;
 }
 
-export async function generateStaticParams(): Promise<
-	{ params: { category: string } }[]
-> {
-	const categories: string[] = await client.fetch(
+export async function generateStaticParams() {
+	const categories = await client.fetch(
 		defineQuery(`*[_type == "project"].Category`)
 	);
 
