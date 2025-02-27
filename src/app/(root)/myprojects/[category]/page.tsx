@@ -33,7 +33,9 @@ interface Project {
 interface params {
 	category: Promise<string>;
 }
+
 export const dynamic = "force-dynamic";
+
 // export async function generateStaticParams(): Promise<
 // 	{ params: { category: string } }[]
 // > {
