@@ -1,4 +1,3 @@
-"use client";
 import { client } from "@/src/sanity/lib/client";
 import Project from "@/src/components/Project";
 import { defineQuery } from "next-sanity";
@@ -34,7 +33,9 @@ interface params {
 	category: Promise<string>;
 }
 
-export const dynamic = "force-dynamic";
+export async function generateStaticParams() {
+	["kitchen", "bathroom", "sauna", "livingroom"];
+}
 
 export default async function categoriezdProjects({
 	params,
