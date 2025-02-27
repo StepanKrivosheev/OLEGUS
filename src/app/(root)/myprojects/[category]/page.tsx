@@ -33,8 +33,6 @@ interface params {
 	category: Promise<string>;
 }
 
-export const dynamic = "force-dynamic";
-
 export default async function categoriezdProjects({
 	params,
 }: {
