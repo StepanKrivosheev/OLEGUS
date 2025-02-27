@@ -29,11 +29,15 @@ interface Project {
 	_updateAt: Date;
 }
 
-interface params {
-	category: Promise<string>;
+interface PageProps {
+	params: {
+		category: string;
+	};
 }
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<
+	{ params: { category: string } }[]
+> {
 	const categories = await client.fetch(
 		defineQuery(`*[_type == "project"].Category`)
 	);
@@ -41,25 +45,21 @@ export async function generateStaticParams() {
 	const uniqueCategories = Array.from(new Set(categories));
 
 	return uniqueCategories.map((category) => ({
-		params: { category },
+		params: { category: category as string },
 	}));
 }
 
-export default async function categoriezdProjects({
-	params,
-}: {
-	params: Promise<params>;
-}) {
-	const { category } = await params;
+export default async function CategorizedProjects({ params }: PageProps) {
+	const { category } = params;
 
 	const project = await client.fetch(
 		defineQuery(
-			`*[_type == "project" && Category == "${category}" ] | order(_createdAt desc) `
+			`*[_type == "project" && Category == "${category}" ] | order(_createdAt desc)`
 		)
 	);
 
-	async function getCategory(category: Promise<string>) {
-		switch (await category) {
+	function getCategory(category: string) {
+		switch (category) {
 			case "kitchen":
 				return "Кухни";
 			case "bathroom":
@@ -72,16 +72,17 @@ export default async function categoriezdProjects({
 				return "Noch keine Projekte in dieser Kategorie!";
 		}
 	}
+
 	return (
 		<div className="grid justify-center">
 			<div className="md:hidden flex justify-center mt-22 bg-bg mx-auto rounded-2xl py-5 items-center px-2">
 				<Categorys />
 			</div>
-			<h2 className="flex justify-center mx-auto mt-8 md:mt-32 text-6xl ">
+			<h2 className="flex justify-center mx-auto mt-8 md:mt-32 text-6xl">
 				{getCategory(category)}
 			</h2>
-			<div className="flex justify-center ">
-				<div className=" grid grid-cols-1 gap-8 mx-10 mt-8 mb-20  max-w-[1200px]">
+			<div className="flex justify-center">
+				<div className="grid grid-cols-1 gap-8 mx-10 mt-8 mb-20 max-w-[1200px]">
 					{project?.length > 0 ?
 						project.map((post: Project) => (
 							<Project
@@ -89,7 +90,7 @@ export default async function categoriezdProjects({
 								post={post}
 							/>
 						))
-					:	<p className="flex text-center mx-auto text-6xl ">
+					:	<p className="flex text-center mx-auto text-6xl">
 							Noch keine Projekte in dieser Kategorie!
 						</p>
 					}
