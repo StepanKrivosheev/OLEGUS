@@ -36,9 +36,9 @@ interface params {
 export function generateStaticParams() {
 	return [
 		{ category: "kitchen" },
-		{ cattegory: "bathroom" },
-		{ cattegory: "sauna" },
-		{ cattegory: "livingroom" },
+		{ category: "bathroom" },
+		{ category: "sauna" },
+		{ category: "livingroom" },
 	];
 }
 
