@@ -34,7 +34,7 @@ interface params {
 }
 
 export async function generateStaticParams() {
-	return ["kitchen", "bathroom", "sauna", "livingroom"].map((category) => ({ category }));
+	return ["kitchen", "bathroom", "sauna", "livingroom"];
 }
 
 export default async function categoriezdProjects({
