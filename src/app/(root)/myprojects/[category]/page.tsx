@@ -33,7 +33,7 @@ interface params {
 	category: Promise<string>;
 }
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
 	return [
 		{ params: { category: "kitchen" } },
 		{ params: { category: "bathroom" } },
