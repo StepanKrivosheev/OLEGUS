@@ -33,20 +33,21 @@ interface params {
 	category: Promise<string>;
 }
 
-export async function generateStaticParams(): Promise<{ params: { category: string } }[]> {
-	const project = await client.fetch(
-			defineQuery(
-				`*[_type == "project"].Category`
-			)
-		)
-		.then((res: string[]) => [...new Set(res)].map((category) => ({ params: { category } })))
-	
-	return  project
-		// { params: { category: "kitchen" } },
-		// { params: { category: "bathroom" } },
-		// { params: { category: "sauna" } },
-		// { params: { category: "livingroom" } },
-		
+export async function generateStaticParams(): Promise<
+	{ params: { category: string } }[]
+> {
+	const project = await client
+		.fetch(defineQuery(`*[_type == "project"].Category`))
+		.then((res: string[]) =>
+			[...new Set(res)].map((category) => ({ params: { category } }))
+		);
+
+	return project;
+	// { params: { category: "kitchen" } },
+	// { params: { category: "bathroom" } },
+	// { params: { category: "sauna" } },
+	// { params: { category: "livingroom" } },
+
 	//];
 }
 
