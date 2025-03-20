@@ -1,10 +1,12 @@
 import { client } from "../sanity/lib/client";
-import { PROJECT_QUERY } from "../sanity/lib/queryies";
 import Categorys from "./Categorys";
 import Project from "./Project";
+import { defineQuery } from "next-sanity";
 
 export default async function cardList() {
-	const project = await client.fetch(PROJECT_QUERY);
+	const project = await client.fetch(
+		defineQuery('*[_type == "project"] | order(_createdAt desc) ')
+	);
 
 	return (
 		<div className="grid justify-center ">
