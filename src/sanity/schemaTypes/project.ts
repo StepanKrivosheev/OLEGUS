@@ -37,6 +37,14 @@ export const project = defineType({
 			},
 		}),
 		defineField({
+			name: "Images for Gallery",
+			type: "array",
+			of: [{ type: "image" }],
+			options: {
+				layout: "grid",
+			},
+		}),
+		defineField({
 			name: "date",
 			type: "date",
 			initialValue: new Date().toISOString().slice(0, 10),

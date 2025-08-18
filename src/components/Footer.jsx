@@ -6,11 +6,14 @@ const Footer = async () => {
 	return (
 		<div className="flex gap-6 ml-8  fixed bottom-4 items-center w-full">
 			<div className="flex bg-bg rounded-2xl gap-4 py-0.5 px-4 items-center">
-				<h3 className="font-bold">Oleg Krivosheev</h3>
+				<a 	
+					href="/impressum"
+					className="font-bold">
+					Impressum</a>
 				<a
 					href="tel:01772779246"
 					className="hidden md:flex lg:flex transition ease-in-out duration-900 hover:bg-primary rounded-2xl px-2 hover:scale-120">
-					0177/2779246
+					+49(0)177/2779246
 				</a>
 				<a
 					href="mailto:post@olegundsoehne.de"

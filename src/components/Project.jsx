@@ -24,7 +24,7 @@ export default async function card(props) {
 							alt="image of my projects"
 						/>
 					</button>
-					<p className="p-0.5 md:px-3 md:w-3/5  overflow-hidden no-scrollbar py-2 mb-4 leading-6 tracking-wider">
+					<p className="p-0.5 pl-4 md:px-3 md:w-3/5  overflow-hidden no-scrollbar py-2 mb-4 leading-6 tracking-wider">
 						{post.text}
 					</p>
 				</div>
@@ -37,7 +37,7 @@ export default async function card(props) {
 				</div>
 			}
 			<div className="flex pt-4 ">
-				<div className="columns-4 ">
+				<div className="columns-4 pl-4">
 					{post.Images != undefined ?
 						post.Images.map((x, i) => (
 							<Image

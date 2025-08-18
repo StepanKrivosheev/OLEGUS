@@ -5,11 +5,11 @@ import Logo from "./Logo";
 const Header = () => {
 	return (
 		<div className="fixed  grid grid-rows-1 grid-flow-col justify-between  md:justify-evenly items-center pt-4 gap-3 top-0 w-full z-50 ">
-			
-			<Logo />
+			<a href="/">
+				<Logo />
+			</a>
 			<Navbar />
 			<Burger />
-		
 		</div>
 	);
 };

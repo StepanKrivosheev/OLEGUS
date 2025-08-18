@@ -5,7 +5,7 @@ export const PROJECT_QUERY = defineQuery(
 );
 
 export const IMAGES_QUERY = defineQuery(
-	'*[_type == "project"]{"images": Images}'
+	'*[_type == "project"]{"images": Images[0]}'
 );
 
 export const BATHROOM_QUERY = defineQuery(

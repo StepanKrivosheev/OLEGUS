@@ -97,7 +97,7 @@ export default async function categoriezdProjects({
 							/>
 						))
 					:	<p className="flex text-center mx-auto text-6xl ">
-							Noch keine Projekte in dieser Kategorie!
+							В этой категории еще нет проектов!
 						</p>
 					}
 				</div>
