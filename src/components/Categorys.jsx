@@ -12,7 +12,7 @@ const Categorys = () => {
 					:	"px-[1vw] py-2 active-focus:bg-secondary/50 hover:bg-secondary/50 rounded-xl "
 				}
 				href="/myprojects">
-				Alle Projekte
+				Все проекты
 			</a>
 			<a
 				className={
@@ -21,7 +21,7 @@ const Categorys = () => {
 					:	"px-[1vw] py-2  active-focus:bg-secondary/50 hover:bg-secondary/50 rounded-xl "
 				}
 				href="/myprojects/kitchen">
-				Küche
+				Кухня
 			</a>
 			<a
 				className={
@@ -30,7 +30,7 @@ const Categorys = () => {
 					:	"px-[1vw] py-2  active-focus:bg-secondary/50 hover:bg-secondary/50 rounded-xl "
 				}
 				href="/myprojects/bathroom">
-				Badezimmer
+				Ванная комната
 			</a>
 			<a
 				className={
@@ -39,7 +39,7 @@ const Categorys = () => {
 					:	"px-[1vw] py-2  active-focus:bg-secondary/50 hover:bg-secondary/50 rounded-xl "
 				}
 				href="/myprojects/livingroom">
-				Wohnzimmer
+				Гостиная
 			</a>
 			<a
 				className={
@@ -48,7 +48,7 @@ const Categorys = () => {
 					:	"px-[1vw] py-2  active-focus:bg-secondary/50 hover:bg-secondary/50 rounded-xl "
 				}
 				href="/myprojects/sauna">
-				Sauna
+				Сауна
 			</a>
 		</div>
 	);

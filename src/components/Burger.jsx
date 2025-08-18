@@ -10,7 +10,7 @@ const Burger = () => {
 			<a
 				href="tel:01772779246"
 				className="button hidden md:flex">
-				Ruft mich!
+				Позвони мне!
 			</a>
 
 			<button className="focus-within:**:grid focus-within:translate-x-18 md:bg-secondary/50 !p-2.5 !rounded-xl bg-secondary md:hidden  ">
@@ -19,7 +19,7 @@ const Burger = () => {
 					height={1000}
 					className="size-8 !flex   "
 					src={menu.src}
-					alt="burger menu icon"
+					alt="иконка бургер меню"
 				/>
 				<Navbar />
 			</button>

@@ -16,14 +16,16 @@ export default async function cardList() {
 								key={post?._id}
 								post={post}
 							/>
-						:	<a
-								key={post?._id}
-								href={"/myprojects"}
-								className="button col-span-2 justify-self-center !bg-primary/15 hover:!bg-secondary">
-								Show more
-							</a>
+						:	null
 					)
-				:	<p className="no-results">No Projects found</p>}
+				:	<p className="no-results">Проекты не найдены</p>}
+				{project?.length > 6 ?
+					<a
+						href={"/myprojects"}
+						className="button col-span-2 justify-self-center !bg-primary/15 hover:!bg-secondary">
+						Показать больше
+					</a>
+				:	null}
 			</div>
 		</div>
 	);

@@ -20,7 +20,7 @@ const Navbar = () => {
 						:	"px-[1vw] py-3.5  rounded-2xl hover:bg-secondary/50 "
 					}
 					href="/">
-					Über Mich
+					Обо мне
 				</a>
 				<HoverCard>
 					<HoverCardTrigger
@@ -30,7 +30,7 @@ const Navbar = () => {
 							:	"px-[1vw] py-3.5  active-focus:bg-secondary/50 hover:bg-secondary/50 rounded-2xl "
 						}
 						href="/myprojects">
-						Meine Projekte
+						Мои проекты
 					</HoverCardTrigger>
 					<HoverCardContent>
 						<Categorys />
@@ -52,7 +52,7 @@ const Navbar = () => {
 						:	"px-[1vw] py-3.5  rounded-2xl hover:bg-secondary/50 "
 					}
 					href="/gallerie">
-					Gallerie
+					Галерея
 				</a>
 			</div>
 		</div>

@@ -13,12 +13,12 @@ export default function Card(props) {
 		<div className="flex w-full text-start p-4 col-span-2 md:col-span-1 bg-primary/15 rounded-2xl h-60  justify-equal">
 			{Images != undefined ?
 				<div className="flex h-full ">
-					<div className="flex w-1/2 object-cover rounded-2xl">
+					<div className="flex max-w-82 object-cover rounded-2xl ">
 						<Slides autoSlide={true}>
 							{Images.map((x, i) => (
 								<Image
 									width={1000}
-						height={1000}
+									height={1000}
 									alt="image of my projects"
 									key={i}
 									className="object-cover  "
