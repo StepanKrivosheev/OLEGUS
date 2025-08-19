@@ -35,16 +35,16 @@ export default async function card(props) {
 					</p>
 				</div>
 			}
-			<div className="flex pt-4 ">
-				<div className="columns-4 pl-4">
+			<div className="flex">
+				<div className="columns-4">
 					{post.Images != undefined ?
 						post.Images.map((x, i) => (
 							<Image
 								width={1000}
 								height={1000}
 								className={
-									i > 0 ?
-										"object-cover my-4 rounded-lg"
+									i >= 0 ?
+										"object-cover rounded-lg mb-4"
 									:	"sm:hidden"
 								}
 								key={i}
