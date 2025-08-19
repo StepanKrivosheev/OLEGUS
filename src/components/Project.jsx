@@ -7,24 +7,23 @@ export default async function card(props) {
 
 	return (
 		<div
-			className={`${className} w-full p-4 flex-col bg-primary/15 rounded-2xl`}>
+			className={`${className} w-full p-4 flex-col bg-primary/15 rounded-2xl min-w-100`}>
 			<h2 className=" text-lg w-full border-b-1 uppercase pb-2">
 				{post.title}
 			</h2>
 			{post.Images != undefined ?
 				<div
-					className="flex-col realtive"
+					className="flex-col relative "
 					key={post?._id}>
-					<button className="md:w-2/5 float-left mt-4 md:flex h-100 focus-within:*:!flex relative">
-						<Image
-							width={1000}
-							height={1000}
-							className="object-cover size-full  rounded-2xl"
-							src={urlFor(post.Images[0]).url()}
-							alt="image of my projects"
-						/>
-					</button>
-					<p className="p-0.5 pl-4 md:px-3 md:w-3/5  overflow-hidden no-scrollbar py-2 mb-4 leading-6 tracking-wider">
+					<Image
+						width={1000}
+						height={1000}
+						className="mr-3 object-cover rounded-2xl float-left md:w-2/5 md:h-full mt-4 md:flex h-60 w-60 focus-within:*:!flex relative"
+						src={urlFor(post.Images[0]).url()}
+						alt="image of my projects"
+					/>
+
+					<p className="p-0.5 md:px-3   no-scrollbar py-2 mb-4 leading-6 tracking-wider">
 						{post.text}
 					</p>
 				</div>

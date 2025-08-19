@@ -9,7 +9,7 @@ export default async function cardList() {
 	);
 
 	return (
-		<div className="grid justify-center ">
+		<div className="grid justify-center pr-8 ">
 			<div className="flex md:hidden justify-center mt-22 bg-bg mx-auto rounded-2xl py-5 items-center px-2">
 				<Categorys />
 			</div>

@@ -21,7 +21,7 @@ export default function RootLayout({
 			className=" bg-background">
 			<body className="relative m-auto">
 				<div
-					className="absolute inset-0 opacity-5 h-full min-h-screen -z-1 mb-10 pb-16 "
+					className="absolute inset-0 opacity-5 w-full h-full min-h-screen -z-1 mb-10 pb-16 "
 					style={{
 						backgroundImage: `url(${grain.src})`,
 						backgroundSize: "100%",

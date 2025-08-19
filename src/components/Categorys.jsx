@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 const Categorys = () => {
 	let path = usePathname();
 	return (
-		<div className="flex-col md:flex ">
+		<div className="flex-col md:flex min-w-108 ">
 			<a
 				className={
 					path == "/myprojects" ?

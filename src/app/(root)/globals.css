@@ -30,7 +30,7 @@
 
 
 html{
-	@apply bg-background font-rus text-text min-w-[320px]
+	@apply bg-background font-rus text-text min-w-[320px] break-words
 }
 
 ::-webkit-scrollbar{
