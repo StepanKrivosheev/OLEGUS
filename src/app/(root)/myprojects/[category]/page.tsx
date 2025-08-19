@@ -80,7 +80,7 @@ export default async function categoriezdProjects({
 	}
 
 	return (
-		<div className="grid justify-center w-screen ">
+		<div className="grid justify-center">
 			<div className="md:hidden flex justify-center mt-22 bg-bg mx-auto rounded-2xl py-5 items-center px-2">
 				<Categorys />
 			</div>
