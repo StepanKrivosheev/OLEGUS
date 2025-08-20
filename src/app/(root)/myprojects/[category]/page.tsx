@@ -69,11 +69,15 @@ export default async function categoriezdProjects({
 			case "kitchen":
 				return "Кухни";
 			case "bathroom":
-				return "Ванные";
+				return "Санузлы";
 			case "sauna":
 				return "Сауны";
 			case "livingroom":
-				return "Гостиные";
+				return "Жилые помещения";
+			case "utility":
+				return "Подсобные помещения";
+			case "outbuildings":
+				return "Уличные постройки";
 			default:
 				return "Категория не найдена";
 		}

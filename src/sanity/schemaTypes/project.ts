@@ -24,7 +24,14 @@ export const project = defineType({
 			name: "Category",
 			type: "string",
 			options: {
-				list: ["kitchen", "bathroom", "livingroom", "sauna"],
+				list: [
+					"kitchen",
+					"bathroom",
+					"livingroom",
+					"utility",
+					"outbuildings",
+					"sauna"
+				],
 			},
 			initialValue: "kitchen",
 		}),

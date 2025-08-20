@@ -15,8 +15,8 @@ const ImpressumPage = () => {
 					Hagen, Sunderlohstr. 63, 58091 <br />
 					Handwerksrolle № 70972085 (IHK Dortmund) <br />
 					StId 321/5149/1999 <br />
-					Bankverbindung - Kto-Nr 100181929 BLZ Am Hüggert 18, 44227
-					Dortmund <br />
+					Bankverbindung - Kto-Nr 100181929 BLZ <br />
+					Am Hüggert 18, 44227 Dortmund <br />
 					45050001 Sparkasse Hagen <br />
 					IBAN – DE77 4505 0001 0100 1819 29 <br />
 					BIC – WELADE3HXXX
