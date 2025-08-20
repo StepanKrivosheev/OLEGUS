@@ -37,7 +37,7 @@ export const project = defineType({
 			},
 		}),
 		defineField({
-			name: "ImagesforGallery",
+			name: "ImagesForGallery",
 			type: "array",
 			of: [{ type: "image" }],
 			options: {

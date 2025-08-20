@@ -1,6 +1,6 @@
 import { urlFor } from "@/src/sanity/lib/image";
 import { client } from "@/src/sanity/lib/client";
-import { IMAGES_QUERY } from "@/src/sanity/lib/queryies";
+import { IMAGES_FOR_GALLERY_QUERY } from "@/src/sanity/lib/queryies";
 import Image from "next/image";
 
 export default async function Gallerie() {
@@ -17,7 +17,7 @@ export default async function Gallerie() {
 		images: Image[];
 	}
 
-	const allImages: AllImages[] = await client.fetch(IMAGES_QUERY);
+	const allImages: AllImages[] = await client.fetch(IMAGES_FOR_GALLERY_QUERY);
 	const images: Image[] = allImages.map((x) => x.images).flat();
 
 	return (

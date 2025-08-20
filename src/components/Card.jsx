@@ -30,7 +30,7 @@ export default function Card(props) {
 					<a
 						className="w-1/2 overflow-scroll no-scrollbar"
 						href={`/myprojects/${Category}`}>
-						<h2 className=" text-lg border-b-1 ml-4">
+						<h2 className=" text-xl border-b-1 ml-4">
 							{post.title}
 						</h2>
 						<p className="px-4 py-2 mb-4 ">{post.text}</p>

@@ -75,7 +75,7 @@ export default async function categoriezdProjects({
 			case "livingroom":
 				return "Гостиные";
 			default:
-				return "Noch keine Projekte in dieser Kategorie!";
+				return "Категория не найдена";
 		}
 	}
 

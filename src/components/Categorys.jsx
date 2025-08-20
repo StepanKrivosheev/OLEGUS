@@ -30,7 +30,7 @@ const Categorys = () => {
 					:	"text-center px-[1vw] py-2  active-focus:bg-secondary/50 hover:bg-secondary/50 rounded-xl "
 				}
 				href="/myprojects/bathroom">
-				Ванная комната
+				Санузел
 			</a>
 			<a
 				className={

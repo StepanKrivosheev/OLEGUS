@@ -8,6 +8,10 @@ export const IMAGES_QUERY = defineQuery(
 	'*[_type == "project"]{"images": Images[0]}'
 );
 
+export const IMAGES_FOR_GALLERY_QUERY = defineQuery(
+	'*[_type == "project"]{"imagesForGallery": Images}'
+);
+
 export const BATHROOM_QUERY = defineQuery(
 	'*[_type == "project" && Category == "bathroom" ] | order(_createdAt desc)'
 );
