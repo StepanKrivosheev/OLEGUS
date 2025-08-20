@@ -9,7 +9,7 @@ export const IMAGES_QUERY = defineQuery(
 );
 
 export const IMAGES_FOR_GALLERY_QUERY = defineQuery(
-	'*[_type == "project"]{"ImagesForGallery": Images}'
+	'*[_type == "project"]{ImagesForGallery}'
 );
 
 export const BATHROOM_QUERY = defineQuery(
