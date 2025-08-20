@@ -7,12 +7,12 @@ const Categorys = () => {
 		<div className="flex">
 			<a
 				className={
-					path == "/myprojects" ?
+					path.includes("/bathroom") ?
 						"text-center px-[1vw] py-2  active-focus:bg-secondary/50  !bg-secondary rounded-xl "
 					:	"text-center px-[1vw] py-2  active-focus:bg-secondary/50 hover:bg-secondary/50 rounded-xl "
 				}
-				href="/myprojects">
-				Все проекты
+				href="/myprojects/bathroom">
+				Санузлы
 			</a>
 			<a
 				className={
@@ -21,16 +21,7 @@ const Categorys = () => {
 					:	"text-center px-[1vw] py-2  active-focus:bg-secondary/50 hover:bg-secondary/50 rounded-xl "
 				}
 				href="/myprojects/kitchen">
-				Кухня
-			</a>
-			<a
-				className={
-					path.includes("/bathroom") ?
-						"text-center px-[1vw] py-2  active-focus:bg-secondary/50  !bg-secondary rounded-xl "
-					:	"text-center px-[1vw] py-2  active-focus:bg-secondary/50 hover:bg-secondary/50 rounded-xl "
-				}
-				href="/myprojects/bathroom">
-				Санузел
+				Кухни
 			</a>
 			<a
 				className={
@@ -39,7 +30,25 @@ const Categorys = () => {
 					:	"text-center px-[1vw] py-2  active-focus:bg-secondary/50 hover:bg-secondary/50 rounded-xl "
 				}
 				href="/myprojects/livingroom">
-				Гостиная
+				Гостиные
+			</a>
+			<a
+				className={
+					path.includes("/utilityrooms") ?
+						"text-center px-[1vw] py-2  active-focus:bg-secondary/50  !bg-secondary rounded-xl "
+					:	"text-center px-[1vw] py-2  active-focus:bg-secondary/50 hover:bg-secondary/50 rounded-xl "
+				}
+				href="/myprojects/utilityrooms">
+				Подсобные
+			</a>
+			<a
+				className={
+					path.includes("/outbuildings") ?
+						"text-center px-[1vw] py-2  active-focus:bg-secondary/50  !bg-secondary rounded-xl "
+					:	"text-center px-[1vw] py-2  active-focus:bg-secondary/50 hover:bg-secondary/50 rounded-xl "
+				}
+				href="/myprojects/outbuildings">
+				Улица
 			</a>
 			<a
 				className={
@@ -48,7 +57,7 @@ const Categorys = () => {
 					:	"text-center px-[1vw] py-2  active-focus:bg-secondary/50 hover:bg-secondary/50 rounded-xl "
 				}
 				href="/myprojects/sauna">
-				Сауна
+				Сауны
 			</a>
 		</div>
 	);

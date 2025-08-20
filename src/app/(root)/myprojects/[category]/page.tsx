@@ -74,7 +74,7 @@ export default async function categoriezdProjects({
 				return "Сауны";
 			case "livingroom":
 				return "Жилые помещения";
-			case "utility":
+			case "utilityrooms":
 				return "Подсобные помещения";
 			case "outbuildings":
 				return "Уличные постройки";
@@ -85,10 +85,10 @@ export default async function categoriezdProjects({
 
 	return (
 		<div className="grid justify-center">
-			<div className="md:hidden flex justify-center mt-22 bg-bg mx-auto rounded-2xl py-5 items-center px-2">
+			<div className="md:hidden flex justify-center mt-28 bg-bg mx-auto rounded-2xl py-5 items-center px-2">
 				<Categorys />
 			</div>
-			<h2 className="flex justify-center mx-auto mt-8 md:mt-32 text-6xl ">
+			<h2 className="flex justify-center text-center mx-auto mt-8 md:mt-32 text-6xl ">
 				{getCategory(category)}
 			</h2>
 			<div className="flex justify-center">

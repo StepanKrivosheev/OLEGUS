@@ -28,7 +28,7 @@ export const project = defineType({
 					"kitchen",
 					"bathroom",
 					"livingroom",
-					"utility",
+					"utilitys",
 					"outbuildings",
 					"sauna"
 				],
