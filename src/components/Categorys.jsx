@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 const Categorys = () => {
 	let path = usePathname();
 	return (
-		<div className="flex">
+		<div className="grid grid-cols-3 md:flex">
 			<a
 				className={
 					path.includes("/bathroom") ?
